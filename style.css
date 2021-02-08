@@ -1,0 +1,186 @@
+/* CSS Animation from: https://stackoverflow.com/questions/8449933/animation-css3-display-opacity */
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+/* responsive image */
+img { width: 100%; }
+
+/* a basic container */
+.container {
+  width:80%;
+  display:block;
+  margin:0 auto;
+}
+
+.container-fluid {
+  width:100%;
+  display:block;
+}
+
+/* post css */
+.post {
+  width:32%;
+  margin-right:2px;
+  border:1px solid #000;
+  display:inline-block;
+  padding-bottom:10px;
+  padding-top:10px;
+  margin-top:10px;
+  text-align:center;
+}
+
+.post .button {
+  border:1px solid #000;
+  width:100%;
+  display:block;
+  padding-top:10px;
+  padding-bottom:10px;
+  cursor:pointer;
+}
+
+.post .button:hover {
+  transition:0.2s;
+  -moz-transition:0.2s;
+  -webkit-transition:0.2s;
+  -o-transition:0.2s;
+  background-color:#222;
+  color:#fff;
+}
+
+/* post nav control, next or previous story */
+.post_nav {
+  position:fixed;
+  top:50%;
+  font-size:1.5em;
+}
+
+.post_nav .right {
+  position:fixed;
+  right:0;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+.post_nav .left {
+  position:fixed;
+  left:0;
+  margin-left:10px;
+  cursor:pointer;
+}
+
+/* close button */
+.close_btn {
+  position:absolute;
+  right:10px;
+  top:10px;
+  border:1px solid #000;
+  border-radius:100%;
+  width:20px;
+  height:20px;
+  text-indent:5.5px;
+  cursor:pointer;
+}
+
+/* hiding all input with id week */
+input[id^="week"] {
+  display:none;
+}
+
+/* if any of the weeks were selected, show fullscreen_varient */
+input[id^="week"]:checked ~ #fullscreen_varient {
+  display:block;
+}
+
+/* if the default is checked hide the close button. Probably could do this in a better way. */
+input[id="default"]:checked ~ #fullscreen_varient .close_btn {
+  display:none;
+}
+
+/* selecting the post corresponding to the week */
+#week1:checked ~ #fullscreen_varient div[id="week1_story"],
+#week2:checked ~ #fullscreen_varient div[id="week2_story"],
+#week3:checked ~ #fullscreen_varient div[id="week3_story"]
+{
+  display:block;
+  /* fade in animation, can be removed if needed */
+  -webkit-animation: fadeInFromNone 0.58s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+/* if any of the radio buttons are selected, hide the initial_screen. selecting default to show the initial_screen */
+input[id^="week"]:checked ~ #initial_screen {
+  display:none;
+}
+
+/* sets all the fullscreen_varient stories to hidden. */
+#fullscreen_varient *[id^="week"] {
+  display:none;
+}

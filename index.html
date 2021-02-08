@@ -1,0 +1,97 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <!-- story controls, setting a default to show the initial_screen and this will all be hidden from the user. -->
+    <input type="radio" name="post_week" id="default" checked hidden>
+    <input type="radio" name="post_week" id="week1">
+    <input type="radio" name="post_week" id="week2">
+    <input type="radio" name="post_week" id="week3">
+
+    <!-- the initial_screen section -->
+    <section id="initial_screen">
+      <!-- one of three posts, nothing special happening here -->
+      <div class="post">
+          <div class="container">
+            <h1>Week 3</h1>
+            <p>Some important briefing, to bait readers...</p>
+            <!-- this label is used in conjuction with the radio buttons -->
+            <label class="button" for="week3">Read More</label>
+          </div>
+        </div>
+      <div class="post">
+          <div class="container">
+            <h1>Week 2</h1>
+            <p>Some important briefing, to bait readers...</p>
+            <label class="button" for="week2">Read More</label>
+          </div>
+        </div>
+      <div class="post">
+          <div class="container">
+            <h1>Week 1</h1>
+            <p>Some important briefing, to bait readers...</p>
+            <label class="button" for="week1">Read More</label>
+          </div>
+        </div>
+    </section>
+    
+    <!-- this is actually where the stories go. -->
+    <section id="fullscreen_varient">
+      <!-- one close button, which selects the radio button default to bring them back to the initial screen -->
+      <label class="close_btn" for="default">x</label>
+      <!-- nothing special here just a story -->
+      <div id="week1_story">
+        <div class="container">
+          <h1>Week 1 Story</h1>
+          <p>Oh super important things...</p>
+          <p>oops, a random doggo</p>
+          <img src="https://thehappypuppysite.com/wp-content/uploads/2018/05/shiba-inu-header.jpg"/>
+          <!-- using these labels to select the radio buttons -->
+          <div class="post_nav">
+            <div class="left">
+              <label for="week2">&larr;</label>
+            </div>
+            <div class="right">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="week2_story">
+        <div class="container">
+          <h1>Week 2 Story</h1>
+          <p>Oh super important things...</p>
+          <p>oops, a random doggo</p>
+          <img src="https://media1.tenor.com/images/4e200eb38110ae0e3a5540fae8c37759/tenor.gif"/>
+          <div class="post_nav">
+            <div class="left">
+              <label for="week3">&larr;</label>
+            </div>
+            <div class="right">
+              <label for="week1">&rarr;</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="week3_story">
+        <div class="container">
+          <h1>Week 3 Story</h1>
+          <p>Oh super important things...</p>
+          <p>oops, a random doggo</p>
+          <img src="https://media.giphy.com/media/gt96y4BzylnSU/giphy.gif"/>
+          <div class="post_nav">
+            <div class="left">
+
+            </div>
+            <div class="right">
+              <label for="week2">&rarr;</label>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
